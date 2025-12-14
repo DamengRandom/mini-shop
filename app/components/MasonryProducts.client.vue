@@ -4,13 +4,15 @@
 
   const config = useRuntimeConfig();
 
-  const checkout = (price: string) => {
-    useCheckout([
+  const { mutate: checkout, isPending } = useCheckout();
+
+  const handleBuy = (price: string) => {
+    checkout([
       {
         price,
         quantity: 1
-      } as unknown as LineItem
-    ]);
+      }
+    ] as unknown as LineItem[]);
   }
 </script>
 <template>
@@ -18,7 +20,9 @@
   <div className={styles.grid}>
     <div>
       <p>Demo production one</p>
-      <button @click="checkout(config.public.NUXT_PRODUCT_PRICE_ID)">BUY NOW ~</button>
+      <button :disabled="isPending" @click="handleBuy(config.public.NUXT_PRODUCT_PRICE_ID)">
+        {{ isPending ? 'Processing...' : 'BUY NOW ~' }}
+      </button>
     </div>
     <div>
       <p>Demo production two</p>

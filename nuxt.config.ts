@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       NUXT_PRODUCT_PRICE_ID: process.env.NUXT_PRODUCT_PRICE_ID,
     }
   },
+  plugins: [
+    '~/plugins/vue-query.ts',
+  ],
   devServer: {
     host: '0.0.0.0'
   },
