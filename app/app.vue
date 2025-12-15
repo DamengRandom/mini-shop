@@ -7,10 +7,14 @@ import Footer from '~/components/Footer.client.vue';
 
 <template>
   <UApp>
-    <Layout>
+    <div class="min-h-screen flex flex-col">
       <Navbar />
-      <MasonryProducts />
+      <main class="flex-1">
+        <Layout>
+          <MasonryProducts />
+        </Layout>
+      </main>
       <Footer />
-    </Layout>
+    </div>
   </UApp>
 </template>

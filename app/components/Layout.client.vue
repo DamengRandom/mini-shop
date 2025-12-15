@@ -1,5 +1,5 @@
 <template>
-  <main class="border-2 border-black p-4">
+  <UContainer>
     <slot />
-  </main>
+  </UContainer>
 </template>

@@ -15,6 +15,10 @@
 ### Backend - No backend needed for now 
 
 - Plan to create a backend for business owner (To deal with fulfillment) (TODO)
+  - Google login via Navbar
+  - Protected route (After google logged in) to view business owner dashboard, called: `/business-owner`
+  - Fetch Stripe transactions dashboard data as a table list view
+  - Add pagination for table list view (Backend + Frontend)
 
 ## How to start locally
 
